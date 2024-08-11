@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button, IconButton, TextField, Typography } from '@mui/material';
 import cladeLogo from '../images/logo2.png'; // Update the path to your logo
 import MenuIcon from '@mui/icons-material/Menu';
+
 const Header = () => {
   const styles = {
     navbar: {

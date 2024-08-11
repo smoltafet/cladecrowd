@@ -40,6 +40,9 @@ function DetailsPage() {
     },
     lastUpdated: '2021-10-01',
     allOrNothing: true,
+    type: 'Modern',
+    likes: 150,
+    views: 950,
   });
 
   const [selectedImage, setSelectedImage] = useState(project.imageUrls[0]);
