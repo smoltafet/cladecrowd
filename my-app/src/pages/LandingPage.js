@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Carousel from '../components/cavousel.js';
 import DisasterBanner from '../components/DisasterBanner.js';
 import {Typography} from "@mui/joy";
+import BlogBanner from '../components/BlogBanner.js';
 function LandingPage() {
   return (
       <div className="App">
@@ -26,6 +27,8 @@ function LandingPage() {
             {/*<Search/>*/}
           <Carousel/>
           <DisasterBanner/>
+
+          <BlogBanner/>
       </div>
   );
 }
