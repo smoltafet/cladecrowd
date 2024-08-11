@@ -39,6 +39,7 @@ function DetailsPage() {
       how: 'We will use the funds to manufacture the gadget.',
     },
     lastUpdated: '2021-10-01',
+    allOrNothing: true,
   });
 
   const [selectedImage, setSelectedImage] = useState(project.imageUrls[0]);
@@ -46,9 +47,10 @@ function DetailsPage() {
   const progress = (project.raised / project.goal) * 100;
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ paddingRight: '100px', paddingLeft: '100px' }}>
        {/* Title Section */}
        <Box style={{ marginBottom: '20px' }}>
+        
         <h1 variant="h1" gutterBottom style={{fontWeight: 300, fontSize: 48}}> 
           {project.title}
         </h1>
@@ -57,12 +59,16 @@ function DetailsPage() {
         </Typography>
       </Box>
 
+      <Button variant="outlined" style={{ marginBottom: '20px' }}>
+        Back
+      </Button>
+
       <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
         <div style={{ width: '50%' }}>
           <img
             src={selectedImage}
             alt={project.title}
-            style={{ width: 750, height: 500 }}
+            style={{ width: "100%", height: 500 }}
           />
           <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
             {project.imageUrls.map((url, index) => (
@@ -98,6 +104,11 @@ function DetailsPage() {
             <CardContent>
               <Typography level="body-md">Gross profit</Typography>
               <Typography level="h2">$ 432.6M</Typography>
+              {project.allOrNothing && (
+                <Typography level="body-sm" color="error">
+                  All or nothing. This project will only be funded if it reaches its goal by Thu, September 5 2024 11:59 PM PDT.
+                </Typography>
+              )}
             </CardContent>
           </CardContent>
           <CardActions>
@@ -110,9 +121,24 @@ function DetailsPage() {
           </CardActions>
         </Card>
       </div>
-      <Typography variant="body1" gutterBottom>
-        {project.description}
-      </Typography>
+      {/* Risks and Challenges Section */}
+      <Box style={{ marginTop: '20px' }}>
+        <Typography variant="h6" component="h2" gutterBottom>
+          Risks and Challenges
+        </Typography>
+        <Typography variant="body1">
+          Every project comes with its own set of risks and challenges. We have identified the following potential issues:
+        </Typography>
+        <ul>
+          <li>Manufacturing delays due to unforeseen circumstances.</li>
+          <li>Supply chain disruptions affecting the availability of materials.</li>
+          <li>Technical challenges in the development of the product.</li>
+          <li>Regulatory approvals and compliance requirements.</li>
+        </ul>
+        <Typography variant="body1">
+          We are committed to addressing these challenges and will keep our backers informed of any significant developments.
+        </Typography>
+      </Box>
       <div style={{ margin: '20px 0' }}>
         <Typography variant="h6" component="p">
           Funding Goal: ${project.goal.toLocaleString()}
@@ -150,7 +176,7 @@ function DetailsPage() {
           </Grid>
         ))}
       </Grid>
-
+      <div style={{ margin: '20px 0' }}/>
       <Tabs value={tabIndex} onChange={handleTabChange} aria-label="project details tabs">
         <TabList>
         <Tab label="Summary" >Summary</Tab>
