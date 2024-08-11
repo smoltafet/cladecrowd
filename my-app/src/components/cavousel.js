@@ -5,6 +5,7 @@ import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
+
 const tilesData = [
     { id: 1, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Yosemite National Park", location: "California, USA" },
     { id: 2, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Grand Canyon", location: "Arizona, USA" },
