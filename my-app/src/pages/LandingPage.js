@@ -5,6 +5,7 @@ import Carousel from '../components/cavousel.js';
 import DisasterBanner from '../components/DisasterBanner.js';
 import {Typography} from "@mui/joy";
 import BlogBanner from '../components/BlogBanner.js';
+import FavoritesCarousel from '../components/FavoritesCarousel.js';
 function LandingPage() {
   return (
       <div className="App">
@@ -23,12 +24,13 @@ function LandingPage() {
                   sx={{ width: '50%' }}
               />
           </Box>
-          <Typography variant="h4" sx={{ textAlign: 'center', mt: 4 }}>Recommendations</Typography>
-            {/*<Search/>*/}
+          <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 32, fontWeight: 300}}> Recommended Projects</Typography>
+          {/*<Search/>*/}
           <Carousel/>
           <DisasterBanner/>
 
           <BlogBanner/>
+          <FavoritesCarousel/>
       </div>
   );
 }

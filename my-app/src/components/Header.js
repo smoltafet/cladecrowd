@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Button, IconButton, TextField } from '@mui/material';
+import { Button, IconButton, TextField, Typography } from '@mui/material';
 import cladeLogo from '../images/logo2.png'; // Update the path to your logo
-
+import MenuIcon from '@mui/icons-material/Menu';
 const Header = () => {
   const styles = {
     navbar: {
@@ -9,31 +9,29 @@ const Header = () => {
       alignItems: 'center',
       justifyContent: 'space-between',
       padding: '10px 20px', // Added vertical padding
-      margin: '0 20px', // Added horizontal margin
-      backgroundColor: '#333',
-      color: 'white',
+      margin: '0 120px', // Added horizontal margin
+      backgroundColor: '#fff',
+      color: '#000',
+      borderBottom: '1px solid #000', // Added border bottom
     },
     navbarBrand: {
       display: 'flex',
       alignItems: 'center',
       textDecoration: 'none',
-      color: 'white',
+      color: '#000', // Changed to black
     },
     navbarLinks: {
       display: 'flex',
       alignItems: 'center',
       gap: '10px',
+      color: '#000', // Changed to black
     },
     logo: {
-      height: '40px',
-      marginRight: '10px',
+      height: '60px',
+      marginRight: '20px',
     },
     menuButton: {
       display: 'none',
-    },
-    searchBar: {
-      flexGrow: 1,
-      margin: '0 20px', // Center the search bar by adding horizontal margin
     },
     '@media (max-width: 600px)': {
       navbarLinks: {
@@ -48,23 +46,26 @@ const Header = () => {
   return (
     <header style={styles.navbar}>
       <Link to="/" style={styles.navbarBrand}>
-        <img src={cladeLogo} alt="Logo" style={styles.logo} />
-        Clade
+    <img src={cladeLogo} alt="Logo" style={styles.logo} />
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 5}}>
+        <text style={{ fontWeight: 300, fontSize: 28 }}>Clade</text>
+        <text style={{ fontWeight: 300, fontSize: 12 }}>Enriching the </text>
+    </div>
+       
       </Link>
-      <TextField
-        variant="outlined"
-        size="small"
-        placeholder="Search..."
-        style={styles.searchBar}
-      />
-      <div style={styles.navbarLinks}>
-        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Landing</Link>
-        <Link to="/details" style={{ color: 'white', textDecoration: 'none' }}>Details</Link>
-        <Button variant="outlined" color="primary" size='medium'>Login</Button>
-        <Button variant="contained" color="primary" size='medium'>Sign Up</Button>
-      </div>
-      <IconButton style={styles.menuButton} color="inherit">
-        <span className="material-icons">menu</span>
+      <nav style={styles.navbarLinks}>
+        <Link to="/about" style={{ color: '#000' }}>About</Link>
+        <Link to="/services" style={{ color: '#000' }}>Services</Link>
+        <Link to="/contact" style={{ color: '#000' }}>Contact</Link>
+        <Link to="/login" style={{ textDecoration: 'none' }}>
+          <Button variant="contained" color="primary">Login</Button>
+        </Link>
+        <Link to="/register" style={{ textDecoration: 'none' }}>
+          <Button variant="contained" color="secondary">Register</Button>
+        </Link>
+      </nav>
+      <IconButton style={styles.menuButton}>
+        <MenuIcon />
       </IconButton>
     </header>
   );
