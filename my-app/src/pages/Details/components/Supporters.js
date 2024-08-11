@@ -17,13 +17,13 @@ function Supporters({ supporters }) {
       <Typography variant="h4" gutterBottom>
         Project Supporters
       </Typography>
-      <List>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
         {supporters.map((supporter, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
           <BioCard supporter={supporter} />
         </Grid>
         ))}
-      </List>
+      </div>
     </Box>
   );
 }
