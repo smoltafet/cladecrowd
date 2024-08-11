@@ -8,8 +8,8 @@ const Header = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: '10px 20px', // Added vertical padding
-      margin: '0 20px', // Added horizontal margin
+      padding: '10px 20px',
+      margin: '0 20px',
       backgroundColor: '#333',
       color: 'white',
     },
@@ -33,7 +33,7 @@ const Header = () => {
     },
     searchBar: {
       flexGrow: 1,
-      margin: '0 20px', // Center the search bar by adding horizontal margin
+      margin: '0 20px',
     },
     '@media (max-width: 600px)': {
       navbarLinks: {
@@ -60,8 +60,16 @@ const Header = () => {
       <div style={styles.navbarLinks}>
         <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Landing</Link>
         <Link to="/details" style={{ color: 'white', textDecoration: 'none' }}>Details</Link>
-        <Button variant="outlined" color="primary" size='medium'>Login</Button>
-        <Button variant="contained" color="primary" size='medium'>Sign Up</Button>
+        <Link to="/login" style={{ textDecoration: 'none' }}>
+          <Button variant="outlined" color="primary" size='medium'>
+            Login
+          </Button>
+        </Link>
+        <Link to="/register" style={{ textDecoration: 'none' }}>
+          <Button variant="contained" color="primary" size='medium'>
+            Sign Up
+          </Button>
+        </Link>
       </div>
       <IconButton style={styles.menuButton} color="inherit">
         <span className="material-icons">menu</span>
