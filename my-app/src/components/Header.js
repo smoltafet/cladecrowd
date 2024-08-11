@@ -2,7 +2,9 @@ import React from 'react';
 import { Button, IconButton } from '@mui/joy';
 import { Link } from 'react-router-dom';
 import { Typography } from "@mui/joy";
+import cladeLogo from '../images/logo2.png'; // Adjust the path as necessary
 
+import theme from '../theme';
 
 const Header = () => {
   const styles = {
@@ -10,7 +12,7 @@ const Header = () => {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      backgroundColor: '#3f51b5', // AppBar default color
+      backgroundColor: theme.colors.primary,
       padding: '10px 20px',
     },
     navbarBrand: {
@@ -24,7 +26,7 @@ const Header = () => {
       alignItems: 'center',
     },
     link: {
-      color: 'white',
+      color: theme.colors.white,
       textDecoration: 'none',
       marginLeft: '20px',
       fontSize: '1em',
@@ -32,11 +34,16 @@ const Header = () => {
     linkHover: {
       textDecoration: 'underline',
     },
+    logo: {
+        height: '150px', // Adjust the height to make the logo smaller
+        marginRight: '150px',
+      },
   };
 
   return (
     <div style={styles.navbar}>
       <div style={styles.navbarBrand}>
+        <img src={cladeLogo} alt="Clade Logo" style={styles.logo} />
         <Link to="/" style={styles.navbarBrand}>Crowdfunding</Link>
       </div>
       <div style={styles.navbarLinks}>
