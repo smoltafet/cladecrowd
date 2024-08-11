@@ -26,11 +26,9 @@ const BlogBanner = () => {
     bar: {
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
-      width: '10px',
-      height: '100%',
+      width: '100px',
+      height: '50%',
       backgroundColor: 'green', // Green bar color
-      marginRight: '15px',
     },
     image: {
       width: '100%',
@@ -40,13 +38,13 @@ const BlogBanner = () => {
       flex: '1',
       padding: '20px',
       marginBottom: '100px',
-      marginTop: '20px',
+      marginTop: '10px',
     },
     title: {
-      fontSize: '1.5rem',
+      fontSize: '2rem',
       fontWeight: 'bold',
       color: '#333', // Darker color for the title
-      marginBottom: '10px',
+      marginBottom: '15px',
       textAlign: 'left',
     },
     description: {
@@ -60,8 +58,9 @@ const BlogBanner = () => {
       fontSize: '1rem',
       color: '#007bff', // Blue color for the "Read more" link
       textDecoration: 'none',
-      cursor: 'pointer',
-      textAlign: 'right',
+      textAlign: 'left',
+      marginRight: '500px',
+      marginTop: '20px',
     },
   };
 
@@ -76,8 +75,9 @@ const BlogBanner = () => {
         </div>
         <div style={styles.textContainer}>
           <div style={styles.bar}></div>
+          <div></div>
           <div style={styles.textContent}>
-            <h1 style={styles.title}>Current Construction!</h1>
+            <h1 style={styles.title}>Algeria Mosque Construction</h1>
             <p style={styles.description}>
             Algeria has inaugurated the world’s third-largest and Africa’s 
             largest mosque, which had been delayed for years amid political 
