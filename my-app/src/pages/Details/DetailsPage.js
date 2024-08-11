@@ -13,6 +13,7 @@ import {
   AspectRatio,
   Link,
   Chip,
+  Sheet
 } from "@mui/joy";
 import CardActions from "@mui/joy/CardActions";
 import CircularProgress from "@mui/joy/CircularProgress";
@@ -83,6 +84,7 @@ function DetailsPage() {
     likes: 150,
     views: 950,
     verified: true,
+    daysLeft: 30,
   });
 
   const [selectedImage, setSelectedImage] = useState(project.imageUrls[0]);
@@ -208,17 +210,113 @@ function DetailsPage() {
             </CardActions>
           </Card>
 
-          <iframe
-            style={{
-              width: "600",
-              height: "450",
-            }}
+          <Box
+          sx={{
+            width: '100%',
+            position: 'relative',
+            overflow: { xs: 'auto', sm: 'initial' },
+      }}
+    >
+      <Box
+        sx={{
+          position: 'absolute',
+          display: 'block',
+          width: '1px',
+          bgcolor: 'warning.300',
+          left: '500px',
+          top: '-24px',
+          bottom: '-24px',
+          '&::before': {
+            top: '4px',
+            content: '"vertical"',
+            display: 'block',
+            position: 'absolute',
+            right: '0.5rem',
+            color: 'text.tertiary',
+            fontSize: 'sm',
+            fontWeight: 'lg',
+          },
+          '&::after': {
+            top: '4px',
+            content: '"horizontal"',
+            display: 'block',
+            position: 'absolute',
+            left: '0.5rem',
+            color: 'text.tertiary',
+            fontSize: 'sm',
+            fontWeight: 'lg',
+          },
+        }}
+      />
+      <Card
+        orientation="horizontal"
+        sx={{
+          width: '100%',
+          flexWrap: 'wrap',
+          [`& > *`]: {
+            '--stack-point': '500px',
+            minWidth:
+              'clamp(0px, (calc(var(--stack-point) - 2 * var(--Card-padding) - 2 * var(--variant-borderWidth, 0px)) + 1px - 100%) * 999, 100%)',
+          }
+        }}
+      >
+        <AspectRatio flex ratio="1" maxHeight={182} sx={{ minWidth: 182 }}>
+          <img
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=286"
+            srcSet="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=286&dpr=2 2x"
             loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-          &q=Space+Needle,Seattle+WA"
-          ></iframe>
+            alt=""
+          />
+        </AspectRatio>
+        <CardContent>
+          <Typography fontSize="xl" fontWeight="lg">
+            Alex Morrison
+          </Typography>
+          <Typography level="body-sm" fontWeight="lg" textColor="text.tertiary">
+            Project Lead
+          </Typography>
+          <Sheet
+            sx={{
+              bgcolor: 'background.level1',
+              borderRadius: 'sm',
+              p: 1.5,
+              my: 1.5,
+              display: 'flex',
+              gap: 2,
+              '& > div': { flex: 1 },
+            }}
+          >
+            <div>
+              <Typography level="body-xs" fontWeight="lg">
+                
+              </Typography>
+              <Typography fontWeight="lg">34</Typography>
+            </div>
+            <div>
+              <Typography level="body-xs" fontWeight="lg">
+                LinkedIn
+              </Typography>
+              <Typography fontWeight="lg">980</Typography>
+            </div>
+            <div>
+              <Typography level="body-xs" fontWeight="lg">
+                Rating
+              </Typography>
+              <Typography fontWeight="lg">8.9</Typography>
+            </div>
+          </Sheet>
+          <Box sx={{ display: 'flex', gap: 1.5, '& > button': { flex: 1 } }}>
+            <Button variant="outlined" color="neutral">
+              Chat
+            </Button>
+            <Button variant="solid" color="primary">
+              Follow
+            </Button>
+          </Box>
+        </CardContent>
+      </Card>
+    </Box>
+
         </div>
       </div>
       {/* Risks and Challenges Section */}
