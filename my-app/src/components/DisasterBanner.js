@@ -1,11 +1,12 @@
+import backgroundImage from '../images/disaster.jpg'; // Import the image
 const DisasterBanner = () => {
     const styles = {
       banner: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'left',
         padding: '20px',
-        backgroundColor: '#f0f0f0', // Adjust background color as needed
+        backgroundColor: 'white', // Adjust background color as needed
       },
       bannerContent: {
         display: 'flex',
@@ -13,37 +14,42 @@ const DisasterBanner = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         maxWidth: '1200px',
-        width: '100%',
-        backgroundColor: 'white', // Adjust background color as needed
+        width: '80%',
+        backgroundImage: `url(${backgroundImage})`, // Use the image
+        backgroundSize: 'cover', // Add this line
+        backgroundPosition: 'center', // Add this line
         padding: '20px',
         boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+        borderRadius: '25px',
+        height: '500px', // Adjust height as needed
       },
       bannerText: {
-        flex: 1,
-        marginRight: '20px',
+        top: '10px',
+        right: '10px',
+        color: 'white'
       },
       title: {
-        fontSize: '2rem',
-        marginBottom: '10px',
+        fontSize: '2.5rem',
+        marginBottom: '5px',
+        textAlign: 'left',
+        fontFamily: 'Merriweather',
       },
       description: {
-        fontSize: '1.2rem',
-        marginBottom: '20px',
+        fontSize: '1rem',
+        textAlign: 'left',
       },
       donateButton: {
-        backgroundColor: '#007bff', // Adjust button color as needed
-        color: 'white',
-        padding: '10px 20px',
+        backgroundColor: 'white', 
+        color: 'black',
+        padding: '15px 40px',
         border: 'none',
-        borderRadius: '5px',
+        borderRadius: '10px',
         cursor: 'pointer',
+        fontSize: '1rem',
+        alignItems: 'left', //tryna move it to the left
       },
       donateButtonHover: {
-        backgroundColor: '#0056b3', // Adjust hover color as needed
-      },
-      bannerImage: {
-        maxWidth: '400px', // Adjust the size as needed
-        borderRadius: '10px',
+        backgroundColor: '#0056b3', 
       },
     };
   
@@ -51,7 +57,8 @@ const DisasterBanner = () => {
       <div style={styles.banner}>
         <div style={styles.bannerContent}>
           <div style={styles.bannerText}>
-            <h1 style={styles.title}>Post Disaster Assistance</h1>
+            <h1 style={styles.title}>Post Disaster 
+                                    Assistance</h1>
             <p style={styles.description}>Support personal causes from Gaza and beyond.</p>
             <button
               style={styles.donateButton}
@@ -62,11 +69,6 @@ const DisasterBanner = () => {
             </button>
           </div>
           <div>
-            <img
-              style={styles.bannerImage}
-              src="/path-to-your-image/Screenshot 2024-08-10 at 9.17.18 PM.png"
-              alt="Personal emergencies"
-            />
           </div>
         </div>
       </div>
@@ -74,26 +76,3 @@ const DisasterBanner = () => {
   };
   
   export default DisasterBanner;
-/*  
-
-
-import React from 'react';
-
-const DisasterBanner = () => {
-    return (
-        <div className="disaster-banner">
-            <div className="left-section">
-                <h1 className="heading">Banner Heading</h1>
-                <p className="sub-heading">Required details</p>
-                <button className="donate-button">Donate Now</button>
-            </div>
-            <div className="right-section">
-                <h2 className="disaster-parameter">Specific Disaster Parameter</h2>
-                <img className="photo-parameter" src="path/to/photo" alt="Disaster Photo" />
-            </div>
-        </div>
-    );
-};
-
-export default DisasterBanner;
-*/

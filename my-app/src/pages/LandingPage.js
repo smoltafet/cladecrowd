@@ -23,6 +23,7 @@ function LandingPage() {
               />
           </Box>
           <Typography variant="h4" sx={{ textAlign: 'center', mt: 4 }}>Recommendations</Typography>
+            {/*<Search/>*/}
           <Carousel/>
           <DisasterBanner/>
       </div>
