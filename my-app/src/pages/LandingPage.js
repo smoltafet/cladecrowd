@@ -1,15 +1,27 @@
 import React from 'react';
-import { Typography } from "@mui/material";
+import { Typography, Box, TextField, InputAdornment } from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
 import Carousel from '../components/cavousel.js';
 import DisasterBanner from '../components/DisasterBanner.js';
 function LandingPage() {
   return (
       <div className="App">
+          <br/>
+          <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+              <TextField
+                  variant="outlined"
+                  placeholder="Search..."
+                  InputProps={{
+                      startAdornment: (
+                          <InputAdornment position="start">
+                              <SearchIcon />
+                          </InputAdornment>
+                      ),
+                  }}
+                  sx={{ width: '50%' }}
+              />
+          </Box>
           <Carousel/>
-          <Typography variant="h1" component="h2" gutterBottom>
-              Land
-          </Typography>
-
           <DisasterBanner/>
       </div>
   );
