@@ -103,7 +103,7 @@ function LandingPage() {
            header={"Most projects require the funding to be fully funded before the project can start."}
            subheader={"This means that if the project does not reach its funding goal, the project will not be funded."}
             image={"https://img.freepik.com/premium-photo/sundar-masjid-design_1028528-120.jpg"}/>       
-          <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 32, fontWeight: 300}}> Recommended Projects</Typography>
+          <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 32, fontWeight: 300}}> Recommended Projects Near You!</Typography>
           <Carousel/>
           <DisasterBanner/>
           <TopPicCarousel/>

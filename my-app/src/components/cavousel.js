@@ -8,12 +8,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const tilesData = [
-  { id: 1, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5fdg_pCxJWTjeHfioHzSXEYf56LzH0GMQ2XlvbKhs2qe3lWoH4F_jT1d5etlKFp7XYcw&usqp=CAU", title: "Yosemite National Park", location: "California, USA" },
-  { id: 2, image: "https://nzarchitects.com.pk/wp-content/uploads/2021/10/islamic-architecture-muslim-architecture-masjid-design-cbr-town-islamabad-nz-architects-islamabad-view-1.jpg", title: "Grand Canyon", location: "Arizona, USA" },
-  { id: 3, image: "https://i.pinimg.com/736x/82/d3/c3/82d3c32673a8b26a94052fa286b5ec95.jpg", title: "Yellowstone", location: "Wyoming, USA" },
-  { id: 4, image: "https://i.pinimg.com/736x/a4/32/38/a43238da42aa969234fae5d125891c21.jpg", title: "Zion National Park", location: "Utah, USA" },
-  { id: 5, image: "https://i.pinimg.com/originals/42/ab/16/42ab164481f8c73829869378d6d9f7a6.jpg", title: "Glacier National Park", location: "Montana, USA" },
-  { id: 6, image: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126257_en-idei-club-p-mosque-design-dizain-pinterest-29.jpg", title: "Mount Rainier", location: "Washington, USA" },
+  { id: 1, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5fdg_pCxJWTjeHfioHzSXEYf56LzH0GMQ2XlvbKhs2qe3lWoH4F_jT1d5etlKFp7XYcw&usqp=CAU", title: "Yosemite Masjid", location: "North Bend, WA" },
+  { id: 2, image: "https://nzarchitects.com.pk/wp-content/uploads/2021/10/islamic-architecture-muslim-architecture-masjid-design-cbr-town-islamabad-nz-architects-islamabad-view-1.jpg", title: "Grand Masjid", location: "Redmond, WA" },
+  { id: 3, image: "https://i.pinimg.com/736x/82/d3/c3/82d3c32673a8b26a94052fa286b5ec95.jpg", title: "Yellowstone Masjid", location: "Seattle, WA" },
+  { id: 4, image: "https://i.pinimg.com/736x/a4/32/38/a43238da42aa969234fae5d125891c21.jpg", title: "Zion National Masjid", location: "Bellevue, WA" },
+  { id: 5, image: "https://i.pinimg.com/originals/42/ab/16/42ab164481f8c73829869378d6d9f7a6.jpg", title: "Glacier National Masjid", location: "Kent, WA" },
+  { id: 6, image: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126257_en-idei-club-p-mosque-design-dizain-pinterest-29.jpg", title: "Mount Rainier Masjid", location: "Koren, WA" },
 ];
 
 const CARD_WIDTH = 320;

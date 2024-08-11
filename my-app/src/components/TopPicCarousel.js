@@ -47,7 +47,7 @@ const data = [
 export default function TopPicCarousel() {
     return (
         <>
-        <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 10, fontWeight: 300}}> Peoples Favorites</Typography>
+        <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 25, fontWeight: 300}}> Top Raised</Typography>
       <Box
         sx={{
           display: 'flex',
