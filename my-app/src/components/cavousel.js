@@ -10,7 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
 import Chip from '@mui/joy/Chip';
 import Avatar from '@mui/joy/Avatar';
-
+import { data } from '../Firebase';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
