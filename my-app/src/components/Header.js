@@ -72,12 +72,6 @@ const Header = () => {
           <Typography variant="caption" style={{ fontWeight: 300 }}>Enriching the </Typography>
         </div>
       </Link>
-      <TextField
-        variant="outlined"
-        size="small"
-        placeholder="Search..."
-        style={styles.searchBar}
-      />
       <div style={styles.navbarLinks}>
         <Link to="/" style={{ color: '#000', textDecoration: 'none' }}>Landing</Link>
         <Link to="/details" style={{ color: '#000', textDecoration: 'none' }}>Details</Link>
