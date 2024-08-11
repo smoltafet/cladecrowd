@@ -45,7 +45,7 @@ const Search = () => {
         type="text"
         value={query}
         onChange={handleInputChange}
-        style={{ width: '100%', padding: '15px', fontSize: '16px', borderRadius: 35 }}
+        style={{ width: '100%', padding: '15px 45px 15px 15px', fontSize: '16px', borderRadius: 35, backgroundColor: "#ededed", borderWidth: 0.2 }}
         placeholder="Search..."
       />
 
@@ -54,13 +54,15 @@ const Search = () => {
           position: 'absolute',
           top: '100%',
           left: 0,
-          right: 0,
+          width: '100%',
           backgroundColor: 'white',
           border: '1px solid #ccc',
           listStyleType: 'none',
-          margin: 0,
+          margin: 5,
           padding: 0,
-          zIndex: 1000
+          zIndex: 1000,
+          borderRadius: 5,
+          marginLeft: 30
         }}>
           {results.map((result, index) => (
             <li
