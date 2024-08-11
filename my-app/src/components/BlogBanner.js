@@ -17,36 +17,51 @@ const BlogBanner = () => {
       alignItems: 'center',
       maxWidth: '1200px',
       width: '100%',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      marginBottom: '45px',
+      marginTop: '45px',
     },
     imageContainer: {
       flex: '1',
     },
+    bar: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '10px',
+      height: '100%',
+      backgroundColor: 'green', // Green bar color
+      marginRight: '15px',
+    },
     image: {
       width: '100%',
       height: 'auto',
-      borderRadius: '5px 0 0 5px', // Rounded corners on the left
     },
     textContainer: {
-      flex: '2',
+      flex: '1',
       padding: '20px',
+      marginBottom: '100px',
+      marginTop: '20px',
     },
     title: {
       fontSize: '1.5rem',
       fontWeight: 'bold',
       color: '#333', // Darker color for the title
       marginBottom: '10px',
+      textAlign: 'left',
     },
     description: {
       fontSize: '1rem',
       color: '#555', // Lighter color for the description
       marginBottom: '10px',
+      marginTop: '10px',
+      textAlign: 'left',
     },
     readMore: {
       fontSize: '1rem',
       color: '#007bff', // Blue color for the "Read more" link
       textDecoration: 'none',
       cursor: 'pointer',
+      textAlign: 'right',
     },
   };
 
@@ -56,17 +71,20 @@ const BlogBanner = () => {
         <div style={styles.imageContainer}>
           <img
             style={styles.image}
-            src={blogImage}
+            src={blogImage} 
           />
         </div>
         <div style={styles.textContainer}>
-          <h1 style={styles.title}>Project Updates Blog</h1>
-          <p style={styles.description}>
-            A destination for company news, creator tips, project inspiration,
-            and home to product updates sharing everything you need to know
-            about whats happening at Kickstarter.
-          </p>
-          <a href="#read-more" style={styles.readMore}>Read more</a>
+          <div style={styles.bar}></div>
+          <div style={styles.textContent}>
+            <h1 style={styles.title}>Current Construction!</h1>
+            <p style={styles.description}>
+            Algeria has inaugurated the world’s third-largest and Africa’s 
+            largest mosque, which had been delayed for years amid political 
+            shifts, ahead of the holy Muslim month of Ramadan.
+            </p>
+            <a href="https://epicmasjid.org/endowment-ground-breaking-gallery/" style={styles.readMore}>Read more</a>
+          </div>
         </div>
       </div>
     </div>
