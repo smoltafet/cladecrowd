@@ -1,50 +1,53 @@
 import React from 'react';
 import { Box, Typography, Button, TextField } from '@mui/material';
 
-function CheckoutModal() {
+function CheckoutModal({ amount, onClose }) {
   return (
-   
-      <Box sx={{ ...modalStyle }}>
-        <Typography id="checkout-modal-title" variant="h6" component="h2">
-          Checkout
+    <Box sx={{ ...modalStyle }}>
+      <Typography id="checkout-modal-title" variant="h6" component="h2">
+        Checkout
+      </Typography>
+      <Typography id="checkout-modal-description" sx={{ mt: 2 }}>
+        {/* Add your checkout form here */}
+        <TextField
+          label="Name"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+        />
+        <TextField
+          label="Card Number"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+        />
+        <TextField
+          label="Expiration Date"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+        />
+        <TextField
+          label="CVV"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+        />
+        <Typography variant="h6" sx={{ mt: 2 }}>
+          Amount: ${amount}
         </Typography>
-        <Typography id="checkout-modal-description" sx={{ mt: 2 }}>
-          {/* Add your checkout form here */}
-          <TextField
-            label="Name"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-          />
-          <TextField
-            label="Card Number"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-          />
-          <TextField
-            label="Expiration Date"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-          />
-          <TextField
-            label="CVV"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-          />
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => {
-              // Handle payment logic here
-            }}
-          >
-            Pay Now
-          </Button>
-        </Typography>
-      </Box>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            // Handle payment logic here
+          }}
+          sx={{ mt: 2 }}
+        >
+          Pay Now
+        </Button>
+      </Typography>
+    </Box>
   );
 }
 

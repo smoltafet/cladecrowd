@@ -32,6 +32,8 @@ function DetailsPage() {
   const handleTabChange = (event, newIndex) => {
     setTabIndex(newIndex);
   };
+
+  let rewardAmt = 50;
   const project = {
     id: 1,
     title: "Innovative Gadget",
@@ -381,11 +383,14 @@ function DetailsPage() {
             right: -200,
            
            }} />
-         <CheckoutModal />
+         <CheckoutModal
+         amount = {rewardAmt}/>
         </Sheet>
       </Modal>
       <Grid container spacing={2}>
-        {project.rewards.map((reward) => (
+        {project.rewards.map((reward) =>{
+          rewardAmt = reward.amount
+          return(
           <Grid item xs={12} sm={6} md={4} key={reward.id}>
             <Card>
               <CardContent>
@@ -406,7 +411,7 @@ function DetailsPage() {
               </CardContent>
             </Card>
           </Grid>
-        ))}
+        )})}
       </Grid>
       <div style={{ margin: "20px 0" }} />
       <Tabs
