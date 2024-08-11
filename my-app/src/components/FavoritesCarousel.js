@@ -15,33 +15,33 @@ import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
 const data = [
     {
         imageUrl: "https://mir-s3-cdn-cf.behance.net/projects/404/d177cf53136821.592946e4777f6.png",
-        views: 1200,
-        likes: 300,
-        title: "Beautiful Mosque",
+        views: 345,
+        likes: 158,
+        title: "Seville, Spain",
         supporter: "John Doe",
-        location: "New York, USA"
+        location: "Seville, Spain"
     },
     {
         imageUrl: "https://nzarchitects.com.pk/wp-content/uploads/2022/09/1-Masjid-Aerial-View.jpg",
         views: 950,
-        likes: 150,
-        title: "Modern Architecture",
+        likes: 421,
+        title: "Mumbia, India",
         supporter: "Jane Smith",
         location: "Los Angeles, USA"
     },
     {
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDf1LWSx13_pYx1q5RNCuvhiZHG2VqqYHNXDny9Q0ls187IZWkjz_v8NVmpzuXZkQUP7M&usqp=CAU",
-        views: 1200,
-        likes: 300,
-        title: "Beautiful Mosque",
+        views: 349,
+        likes: 201,
+        title: "New York, USA",
         supporter: "John Doe",
         location: "New York, USA"
     },
     {
         imageUrl: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126226_en-idei-club-p-mosque-design-dizain-pinterest-18.jpg",
         views: 950,
-        likes: 150,
-        title: "Modern Architecture",
+        likes: 578,
+        title: "Los Angeles, USA",
         supporter: "Jane Smith",
         location: "Los Angeles, USA"
     }
@@ -195,7 +195,7 @@ function DribbbleShot({item}) {
             '&:hover': { color: 'primary.plainColor' },
           }}
         >
-          {item.views}k
+          {item.views}
         </Link>
       </Box>
     </Card>

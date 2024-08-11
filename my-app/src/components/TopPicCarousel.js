@@ -19,43 +19,43 @@ import BookmarkAdd from '@mui/icons-material/BookmarkAddOutlined';
 
 const data = [
     {
-        imageUrl: "https://mir-s3-cdn-cf.behance.net/projects/404/d177cf53136821.592946e4777f6.png",
+        imageUrl: "https://nomadsland.travel/sites/default/files/styles/facebook_post/public/2023-01/kabul-city-2.jpg?itok=aKNilqRG",
         views: 1242,
         likes: 300,
         title: "Tor De",
         supporter: "John Doe",
-        location: "New York, NY"
+        location: "Kabul, Afganistan"
     },
     {
-        imageUrl: "https://nzarchitects.com.pk/wp-content/uploads/2022/09/1-Masjid-Aerial-View.jpg",
+        imageUrl: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSmh5NjAnF9BiA5mJ05nNzm9JaHNaSnWM2TCyKKClNYeBU7rj0l38ORSdLLPjS7-zwaXEkUhY95FrZwbdZPgNySuYSICiZju5M2F9TJAnM",
         views: 211,
         likes: 222,
         title: "Modern Architecture",
         supporter: "Jane Smith",
-        location: "Los Angeles, CA"
+        location: "Algiers, Algeria"
     },
     {
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDf1LWSx13_pYx1q5RNCuvhiZHG2VqqYHNXDny9Q0ls187IZWkjz_v8NVmpzuXZkQUP7M&usqp=CAU",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/26/HRBmosque.JPG",
         views: 572,
         likes: 300,
         title: "Beautiful Mosque",
         supporter: "John Doe",
-        location: "Irvine, CA"
+        location: "Heilongjiang, China"
     },
     {
-        imageUrl: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126226_en-idei-club-p-mosque-design-dizain-pinterest-18.jpg",
+        imageUrl: "https://media-cdn.tripadvisor.com/media/photo-s/17/d0/72/20/yali-konak-mosque.jpg",
         views: 950,
         likes: 212,
         title: "Modern Architecture",
         supporter: "Jane Smith",
-        location: "San Francisco, CA"
+        location: "Izmir, Turkey"
     }
 ]
 
 export default function TopPicCarousel() {
     return (
         <>
-        <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 32, fontWeight: 300}}> Peoples Favorites</Typography>
+        <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 10, fontWeight: 300}}> Peoples Favorites</Typography>
       <Box
         sx={{
           display: 'flex',

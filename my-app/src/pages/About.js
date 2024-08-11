@@ -1,5 +1,6 @@
 import React from 'react';
 import mosque from '../images/mosque.jpg'; // Import the image
+import BlogBanner from '../components/BlogBanner';
 
 const About = () => {
   const styles = {
@@ -75,15 +76,21 @@ const About = () => {
         <div style={styles.content}>
           <div style={styles.textSection}>
             <p style={styles.paragraph}>
-              Our company was founded with the mission of creating innovative solutions for everyday problems.
-              We believe in the power of technology to transform lives and make the world a better place.
-              Our team is dedicated to pushing the boundaries of what's possible and delivering top-notch products to our customers.
+            Our company was founded with the mission of creating innovative solutions for Muslims around the world.
+            We believe in the power of technology to transform lives and make the world a better place.
+            Our team is dedicated to pushing the boundaries of what's possible and delivering the resources necessary to build mosques.
             </p>
             <p style={styles.paragraph}>
-              Over the years, we have grown from a small startup to a leading player in the industry.
-              Our success is driven by our talented team, our commitment to quality, and our passion for innovation.
-              We are constantly exploring new ideas and technologies to stay ahead of the curve and provide the best solutions to our clients.
+            We are driven by:
             </p>
+            <p style={styles.paragraph}> 
+            Enriching the Ummah:
+          </p>
+          <p style={styles.paragraph}> 
+          Empowering Mosques:        </p>
+          <p style={styles.paragraph}> 
+          Uniting Communities:
+          </p>
           </div>
           <div style={styles.imageSection}>
             <img style={styles.image} src={mosque} alt="Mosque" />
