@@ -31,6 +31,7 @@ function DetailsPage() {
     setTabIndex(newIndex);
   };
   const [project, setProject] = useState({
+    id: 1,
     title: "Innovative Gadget",
     description: "This is an innovative gadget that will change the world.",
     goal: 50000,
