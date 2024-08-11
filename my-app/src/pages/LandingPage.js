@@ -1,9 +1,11 @@
-import Header from './components/Header';
+import { Typography } from "@mui/joy";
 
 function LandingPage() {
   return (
     <div className="App">
-      <Header />
+        <Typography variant="h1" component="h2" gutterBottom>
+            Landing Page
+        </Typography>
     </div>
   );
 }
