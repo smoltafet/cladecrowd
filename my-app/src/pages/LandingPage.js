@@ -1,8 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
 import Header from './components/Header';
 
-function App() {
+function LandingPage() {
   return (
     <div className="App">
       <Header />
@@ -10,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default LandingPage;
