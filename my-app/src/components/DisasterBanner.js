@@ -37,15 +37,17 @@ const DisasterBanner = () => {
       description: {
         fontSize: '1rem',
         textAlign: 'left',
+        fontFamily: 'Merriweather',
       },
       donateButton: {
         backgroundColor: 'white', 
         color: 'black',
-        padding: '15px 40px',
+        padding: '8px 40px',
         border: 'none',
         borderRadius: '10px',
         cursor: 'pointer',
         fontSize: '1rem',
+        fontFamily: 'Merriweather',
         alignItems: 'left', //tryna move it to the left
       },
       donateButtonHover: {

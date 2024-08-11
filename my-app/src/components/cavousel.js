@@ -4,6 +4,12 @@ import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
+import Link from '@mui/joy/Link';
+import Favorite from '@mui/icons-material/Favorite';
+import Visibility from '@mui/icons-material/Visibility';
+import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
+import Chip from '@mui/joy/Chip';
+import Avatar from '@mui/joy/Avatar';
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -49,6 +55,7 @@ function Carousel() {
           const isNext = index === (activeIndex + 1) % tilesData.length;
 
           return (
+            <>
             <Card
               key={tile.id}
               sx={{
@@ -76,24 +83,35 @@ function Carousel() {
                     'linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 80%)', // Adjust gradient if necessary
                 }}
               />
-              <CardContent sx={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                padding: '16px',
-                backgroundColor: 'rgba(0,0,0,0.5)', // Semi-transparent background for better text visibility
-              }}>
-                <Typography level="title-lg" textColor="white" sx={{ mb: 1 }}>
-                    {tile.title}
-                </Typography>
-                <Typography
-                    startDecorator={<LocationOnRoundedIcon />}
-                    textColor="white">
-                    {tile.location}
-                </Typography>
-              </CardContent>
+              <CardContent
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      padding: '16px',
+                      backgroundColor: 'rgba(0,0,0,0.7)', // Increased opacity for better text visibility
+                      zIndex: 1, // Ensure this is above other elements
+                    }}
+                  >
+                    <Typography
+                      level="title-lg"
+                      textColor="#fff"
+                      sx={{ mb: 1, textShadow: '0px 0px 5px rgba(0,0,0,0.7)' }}
+                    >
+                      {tile.title}
+                    </Typography>
+                    <Typography
+                      startDecorator={<LocationOnRoundedIcon />}
+                      textColor="#fff"
+                      sx={{ textShadow: '0px 0px 5px rgba(0,0,0,0.7)' }}
+                    >
+                      {tile.location}
+                    </Typography>
+                  </CardContent>
+                  
             </Card>
+            </>
           );
         })}
       </Box>
