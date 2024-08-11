@@ -17,13 +17,13 @@ function Leaders({ leaders }) {
       <Typography variant="h4" gutterBottom>
         Project Leaders
       </Typography>
-      <List>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
         {leaders.map((leader, index) => (
           <ListItem key={index}>
             <BioCard leader={leader} />
           </ListItem>
         ))}
-      </List>
+      </div>
     </Box>
   );
 }

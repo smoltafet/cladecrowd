@@ -15,12 +15,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const tilesData = [
-  { id: 1, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Yosemite National Park", location: "California, USA" },
-  { id: 2, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Grand Canyon", location: "Arizona, USA" },
-  { id: 3, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Yellowstone", location: "Wyoming, USA" },
-  { id: 4, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Zion National Park", location: "Utah, USA" },
-  { id: 5, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Glacier National Park", location: "Montana, USA" },
-  { id: 6, image: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320", title: "Mount Rainier", location: "Washington, USA" },
+  { id: 1, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5fdg_pCxJWTjeHfioHzSXEYf56LzH0GMQ2XlvbKhs2qe3lWoH4F_jT1d5etlKFp7XYcw&usqp=CAU", title: "Yosemite National Park", location: "California, USA" },
+  { id: 2, image: "https://nzarchitects.com.pk/wp-content/uploads/2021/10/islamic-architecture-muslim-architecture-masjid-design-cbr-town-islamabad-nz-architects-islamabad-view-1.jpg", title: "Grand Canyon", location: "Arizona, USA" },
+  { id: 3, image: "https://i.pinimg.com/736x/82/d3/c3/82d3c32673a8b26a94052fa286b5ec95.jpg", title: "Yellowstone", location: "Wyoming, USA" },
+  { id: 4, image: "https://i.pinimg.com/736x/a4/32/38/a43238da42aa969234fae5d125891c21.jpg", title: "Zion National Park", location: "Utah, USA" },
+  { id: 5, image: "https://i.pinimg.com/originals/42/ab/16/42ab164481f8c73829869378d6d9f7a6.jpg", title: "Glacier National Park", location: "Montana, USA" },
+  { id: 6, image: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126257_en-idei-club-p-mosque-design-dizain-pinterest-29.jpg", title: "Mount Rainier", location: "Washington, USA" },
 ];
 
 const CARD_WIDTH = 320;
@@ -72,25 +72,20 @@ function Carousel() {
               <CardCover>
                 <img
                   src={tile.image}
-                  srcSet={`${tile.image}&dpr=2 2x`}
+                  srcSet={tile.image}
                   loading="lazy"
                   alt={tile.title}
                 />
               </CardCover>
-              <CardCover
-                sx={{
-                  background:
-                    'linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 80%)', // Adjust gradient if necessary
-                }}
-              />
-              <CardContent
+             <CardContent
                     sx={{
                       position: 'absolute',
                       bottom: 0,
                       left: 0,
                       right: 0,
                       padding: '16px',
-                      backgroundColor: 'rgba(0,0,0,0.7)', // Increased opacity for better text visibility
+                      color: '#fff',
+                      backgroundColor: 'rgba(0,0,0,0.5)', // Increased opacity for better text visibility
                       zIndex: 1, // Ensure this is above other elements
                     }}
                   >
@@ -109,6 +104,7 @@ function Carousel() {
                       {tile.location}
                     </Typography>
                   </CardContent>
+              
                   
             </Card>
             </>
