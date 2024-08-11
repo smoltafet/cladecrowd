@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
-import { Typography, Button, Card, CardContent, Grid, LinearProgress, Box } from '@mui/joy';
+import { Typography, Button, Card, CardContent, Grid, LinearProgress, Box, Tabs, Tab, TabList } from '@mui/joy';
 import CardActions from '@mui/joy/CardActions';
 import CircularProgress from '@mui/joy/CircularProgress';
 import SvgIcon from '@mui/joy/SvgIcon';
+import Leaders from './components/Leaders';
+import Supporters from './components/Supporters';
+import Summary from './components/Summary';
 
 function DetailsPage() {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const handleTabChange = (event, newIndex) => {
+    setTabIndex(newIndex);
+  };
   const [project, setProject] = useState({
     title: 'Innovative Gadget',
     description: 'This is an innovative gadget that will change the world.',
@@ -17,11 +25,20 @@ function DetailsPage() {
       'https://via.placeholder.com/600x400/0000FF/808080',
     ],
     leaders: ['John Doe', 'Jane Smith'],
+    supporters: [
+      { name: 'John Doe', bio: 'Hello, this is my bio and I am a PRO member of MUI. I am a developer and I love to code.' },
+      { name: 'Jane Smith', bio: 'Hello, this is my bio and I am a PRO member of MUI. I am a developer and I love to code.' },
+    ],
     rewards: [
       { id: 1, title: 'Early Bird', description: 'Get the gadget at a discounted price.', amount: 50 },
       { id: 2, title: 'Standard', description: 'Get the gadget at the regular price.', amount: 75 },
       { id: 3, title: 'Premium', description: 'Get the gadget with additional accessories.', amount: 100 },
     ],
+    summary: {
+      what: 'This gadget is a game-changer.',
+      how: 'We will use the funds to manufacture the gadget.',
+    },
+    lastUpdated: '2021-10-01',
   });
 
   const [selectedImage, setSelectedImage] = useState(project.imageUrls[0]);
@@ -133,31 +150,19 @@ function DetailsPage() {
           </Grid>
         ))}
       </Grid>
-      {/* Why Section */}
-      <Box style={{ padding: '20px', margin: '20px 0' }}>
-        <Typography variant="h4" gutterBottom>Why</Typography>
-        <Typography variant="body1">Explanation of why this project is important.</Typography>
-      </Box>
-      
-      {/* How Section */}
-      <Box style={{ padding: '20px', margin: '20px 0' }}>
-        <Typography variant="h4" gutterBottom>How</Typography>
-        <Typography variant="body1">Details on how the project will be executed.</Typography>
-      </Box>
 
-      {/* Supporters Section */}
-      <Box style={{ padding: '20px', margin: '20px 0' }}>
-        <Typography variant="h4" gutterBottom>Supporters</Typography>
-        <Typography variant="body1">Information about the supporters of the project.</Typography>
-      </Box>
+      <Tabs value={tabIndex} onChange={handleTabChange} aria-label="project details tabs">
+        <TabList>
+        <Tab label="Summary" >Summary</Tab>
+        <Tab label="Supporters" >Supporters</Tab>
+        <Tab label="Leaders" >Leaders</Tab>
+        </TabList>
+      </Tabs>
 
-      {/* Leaders Section */}
-      <Box style={{ padding: '20px', margin: '20px 0' }}>
-        <Typography variant="h4" gutterBottom>Leaders</Typography>
-        {project.leaders.map((leader, index) => (
-          <Typography key={index} variant="body1">{leader}</Typography>
-        ))}
-      </Box>
+      {tabIndex === 0 && <Summary what={project.summary.what} how={project.summary.how} />}
+      {tabIndex === 1 && <Supporters supporters={project.supporters} />}
+      {tabIndex === 2 && <Leaders leaders={project.leaders} />}
+
     </div>
   );
 }
