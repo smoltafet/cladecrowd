@@ -14,45 +14,54 @@ const Header = () => {
       alignItems: 'center',
       backgroundColor: theme.colors.primary,
       padding: '10px 20px',
+      flexWrap: 'wrap', // Allow wrapping for smaller screens
     },
     navbarBrand: {
       color: 'white',
       textDecoration: 'none',
       fontSize: '1.5em',
       fontWeight: 'bold',
+      display: 'flex',
+      alignItems: 'center',
     },
     navbarLinks: {
       display: 'flex',
       alignItems: 'center',
-    },
-    link: {
-      color: theme.colors.white,
-      textDecoration: 'none',
-      marginLeft: '20px',
-      fontSize: '1em',
-    },
-    linkHover: {
-      textDecoration: 'underline',
+      gap: '10px',
     },
     logo: {
-        height: '150px', // Adjust the height to make the logo smaller
-        marginRight: '150px',
+      height: '40px',
+      marginRight: '10px',
+    },
+    menuButton: {
+      display: 'none',
+    },
+    '@media (max-width: 600px)': {
+      navbarLinks: {
+        display: 'none',
       },
+      menuButton: {
+        display: 'block',
+      },
+    },
   };
 
   return (
-    <div style={styles.navbar}>
-      <div style={styles.navbarBrand}>
-        <img src={cladeLogo} alt="Clade Logo" style={styles.logo} />
-        <Link to="/" style={styles.navbarBrand}>Crowdfunding</Link>
-      </div>
+    <header style={styles.navbar}>
+      <Link to="/" style={styles.navbarBrand}>
+        <img src={cladeLogo} alt="Logo" style={styles.logo} />
+        Clade
+      </Link>
       <div style={styles.navbarLinks}>
-        <Link to="/" style={styles.link}>LandingPage</Link>
-        <Link to="/details" style={styles.link}>Details</Link>
-        <Link to="/auth" style={styles.link}>Auth</Link>
+        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Landing</Link>
+        <Link to="/details" style={{ color: 'white', textDecoration: 'none' }}>Details</Link>
+        <Button variant="outlined" color="primary" size='medium'>Sign Up</Button>
       </div>
-    </div>
+      <IconButton style={styles.menuButton} color="inherit">
+        <span className="material-icons">menu</span>
+      </IconButton>
+    </header>
   );
-}
+};
 
 export default Header;
