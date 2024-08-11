@@ -14,7 +14,7 @@ import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
 
 const data = [
     {
-        imageUrl: "https://mir-s3-cdn-cf.behance.net/projects/404/d177cf53136821.592946e4777f6.png",
+        imageUrl: "https://cdn.britannica.com/27/177327-050-0AD84391/Jama-Masjid-Delhi-India.jpg",
         views: 345,
         likes: 158,
         title: "Seville",
@@ -115,7 +115,7 @@ function DribbbleShot({item}) {
             >
               <Typography level="h2" noWrap sx={{ fontSize: 'lg' }}>
                 <Link
-                  href="#dribbble-shot"
+                  href="/details"
                   overlay
                   underline="none"
                   sx={{

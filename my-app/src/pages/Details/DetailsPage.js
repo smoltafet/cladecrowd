@@ -36,8 +36,8 @@ function DetailsPage() {
   let rewardAmt = 50;
   const project = {
     id: 1,
-    title: "Innovative Gadget",
-    description: "This is an innovative gadget that will change the world.",
+    title: "MAPS - Masjid",
+    description: "Our community mosque has been a cornerstone of spiritual and social activities for years. With the growing number of attendees, we need to expand our facilities to better serve our community. The expansion will include additional prayer halls, classrooms for religious education, a community kitchen, and more parking spaces. Your support will help us create a more inclusive and accommodating space for everyone.",
     goal: 50000,
     raised: 35000,
     backers: 120,
@@ -50,12 +50,12 @@ function DetailsPage() {
     supporters: [
       {
         name: "John Doe",
-        bio: "Hello, this is my bio and I am a PRO member of MUI. I am a developer and I love to code.",
+        bio: "Hello, I have been helping masjids for over a decade",
         profileUrl: "https://mui.com/static/images/avatar/1.jpg",
       },
       {
         name: "Jane Smith",
-        bio: "Hello, this is my bio and I am a PRO member of MUI. I am a developer and I love to code.",
+        bio: "I love donating, its my side hobby",
         profileUrl: "https://mui.com/static/images/avatar/2.jpg",
       },
     ],
@@ -63,25 +63,25 @@ function DetailsPage() {
       {
         id: 1,
         title: "Early Bird",
-        description: "Get the gadget at a discounted price.",
+        description: "Be among the first to help fund the project.",
         amount: 50,
       },
       {
         id: 2,
         title: "Standard",
-        description: "Get the gadget at the regular price.",
+        description: "Help build the project with a standard donation.",
         amount: 75,
       },
       {
         id: 3,
         title: "Premium",
-        description: "Get the gadget with additional accessories.",
+        description: "Get a special mention in the project credits.",
         amount: 100,
       },
     ],
     summary: {
-      what: "This gadget is a game-changer.",
-      how: "We will use the funds to manufacture the gadget.",
+      what: "We are raising funds to expand our community mosque.",
+      how: "The expansion will include additional prayer halls, classrooms for religious education, a community kitchen, and more parking spaces.",
     },
     lastUpdated: "2021-10-01",
     allOrNothing: true,
@@ -427,7 +427,7 @@ function DetailsPage() {
       </Tabs>
 
       {tabIndex === 0 && (
-        <Summary what={project.summary.what} how={project.summary.how} />
+        <Summary what={project.summary.what} how={project.description} />
       )}
       {tabIndex === 1 && <Supporters supporters={project.supporters} />}
       {tabIndex === 2 && <Leaders leaders={project.leaders} />}

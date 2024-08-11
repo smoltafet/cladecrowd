@@ -8,46 +8,45 @@ function CheckoutModal({ amount, onClose }) {
         Checkout
       </Typography>
       <Typography id="checkout-modal-description" sx={{ mt: 2 }}>
-        {/* Add your checkout form here */}
-        <TextField
-          label="Name"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="Card Number"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="Expiration Date"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="CVV"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-        />
         <Typography variant="h6" sx={{ mt: 2 }}>
           Amount: ${amount}
         </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => {
-            // Handle payment logic here
-          }}
-          sx={{ mt: 2 }}
-        >
-          Pay Now
-        </Button>
-      </Typography>
-    </Box>
+          {/* Add your checkout form here */}
+          <TextField
+            label="Name"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+          />
+          <TextField
+            label="Card Number"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+          />
+          <TextField
+            label="Expiration Date"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+          />
+          <TextField
+            label="CVV"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              // Handle payment logic here
+            }}
+          >
+            $50 Pay Now
+          </Button>
+        </Typography>
+      </Box>
   );
 }
 
