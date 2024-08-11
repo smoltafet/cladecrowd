@@ -12,20 +12,19 @@ import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AuthProvider from './context/AuthContext'; // Import AuthProvider
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Header />
       <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/details" element={<DetailsPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/details" element={<DetailsPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
-      <Footer /> {/* Add the Footer component here */}
-    </>
+    </AuthProvider>
   );
 }
-
 export default App;
