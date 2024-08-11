@@ -5,7 +5,6 @@ import {
   Card,
   CardContent,
   Grid,
-  LinearProgress,
   Box,
   Tabs,
   Tab,
@@ -30,7 +29,7 @@ function DetailsPage() {
   const handleTabChange = (event, newIndex) => {
     setTabIndex(newIndex);
   };
-  const [project, setProject] = useState({
+  const project = {
     id: 1,
     title: "Innovative Gadget",
     description: "This is an innovative gadget that will change the world.",
@@ -86,11 +85,9 @@ function DetailsPage() {
     views: 950,
     verified: true,
     daysLeft: 30,
-  });
-
+  };
+  
   const [selectedImage, setSelectedImage] = useState(project.imageUrls[0]);
-
-  const progress = (project.raised / project.goal) * 100;
 
   return (
     <div style={{ paddingRight: "150px", paddingLeft: "150px" }}>
@@ -218,37 +215,7 @@ function DetailsPage() {
             overflow: { xs: 'auto', sm: 'initial' },
       }}
     >
-      <Box
-        sx={{
-          position: 'absolute',
-          display: 'block',
-          width: '1px',
-          bgcolor: 'warning.300',
-          left: '500px',
-          top: '-24px',
-          bottom: '-24px',
-          '&::before': {
-            top: '4px',
-            content: '"vertical"',
-            display: 'block',
-            position: 'absolute',
-            right: '0.5rem',
-            color: 'text.tertiary',
-            fontSize: 'sm',
-            fontWeight: 'lg',
-          },
-          '&::after': {
-            top: '4px',
-            content: '"horizontal"',
-            display: 'block',
-            position: 'absolute',
-            left: '0.5rem',
-            color: 'text.tertiary',
-            fontSize: 'sm',
-            fontWeight: 'lg',
-          },
-        }}
-      />
+
       <Card
         orientation="horizontal"
         sx={{
@@ -289,15 +256,15 @@ function DetailsPage() {
           >
             <div>
               <Typography level="body-xs" fontWeight="lg">
-                
+                Backed Projects
               </Typography>
               <Typography fontWeight="lg">34</Typography>
             </div>
             <div>
               <Typography level="body-xs" fontWeight="lg">
-                LinkedIn
+                Donate to 
               </Typography>
-              <Typography fontWeight="lg">980</Typography>
+              <Typography fontWeight="lg">980 Projects</Typography>
             </div>
             <div>
               <Typography level="body-xs" fontWeight="lg">
@@ -311,7 +278,7 @@ function DetailsPage() {
               Chat
             </Button>
             <Button variant="solid" color="primary">
-              Follow
+              Learn More
             </Button>
           </Box>
         </CardContent>

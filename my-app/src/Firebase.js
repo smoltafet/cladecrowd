@@ -3,7 +3,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import {getAuth} from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
-import { getDocs, collection } from "firebase/firestore"; 
 
 
 const firebaseConfig = {
@@ -21,13 +20,5 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-async function getAllProperties() {
-  const querySnapshot = await getDocs(collection(db, "properties"));
-  querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
-  });
-}
 
-const data = getAllProperties();
-
-export {db, auth, data};
+export {db, auth};
