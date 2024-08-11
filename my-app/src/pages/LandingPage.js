@@ -1,14 +1,12 @@
 import React from 'react';
-import { Typography, Box, TextField, InputAdornment } from "@mui/material";
+import { Box, TextField, InputAdornment } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import Carousel from '../components/cavousel.js';
 import DisasterBanner from '../components/DisasterBanner.js';
-import Search from '../components/Search.js';
-
+import {Typography} from "@mui/joy";
 function LandingPage() {
   return (
       <div className="App">
-<<<<<<< HEAD
           <br/>
           <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
               <TextField
@@ -24,12 +22,11 @@ function LandingPage() {
                   sx={{ width: '50%' }}
               />
           </Box>
-=======
-        <Search/>
->>>>>>> d5ed009c2c08c1056a8ef68f1051986f5aa28a3f
+          <Typography variant="h4" sx={{ textAlign: 'center', mt: 4 }}>Recommendations</Typography>
           <Carousel/>
           <DisasterBanner/>
       </div>
   );
 }
 export default LandingPage;
+
