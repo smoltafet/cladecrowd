@@ -6,7 +6,7 @@ import SvgIcon from '@mui/joy/SvgIcon';
 import Leaders from './components/Leaders';
 import Supporters from './components/Supporters';
 import Summary from './components/Summary';
-
+import ReportIcon from '@mui/icons-material/Report';
 function DetailsPage() {
   const [tabIndex, setTabIndex] = useState(0);
 
@@ -67,7 +67,7 @@ function DetailsPage() {
       </Button>
 
       <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
-        <div style={{ width: '50%' }}>
+        <div style={{ width: '100%' }}>
           <img
             src={selectedImage}
             alt={project.title}
@@ -85,7 +85,8 @@ function DetailsPage() {
             ))}
           </div>
         </div>
-        <Card variant="solid" color="primary" invertedColors style={{ width: '50%' }}>
+        <div>
+        <Card variant="solid" color="primary" invertedColors style={{ width: '100%' }}>
           <CardContent orientation="horizontal">
             <CircularProgress size="lg" determinate value={20}>
               <SvgIcon>
@@ -105,8 +106,8 @@ function DetailsPage() {
               </SvgIcon>
             </CircularProgress>
             <CardContent>
-              <Typography level="body-md">Gross profit</Typography>
-              <Typography level="h2">$ 432.6M</Typography>
+              <Typography level="body-md">Total Raised</Typography>
+              <Typography level="h2">$ 32.6M</Typography>
               {project.allOrNothing && (
                 <Typography level="body-sm" color="error">
                   All or nothing. This project will only be funded if it reaches its goal by Thu, September 5 2024 11:59 PM PDT.
@@ -123,6 +124,39 @@ function DetailsPage() {
             </Button>
           </CardActions>
         </Card>
+
+        <Card variant="solid"  invertedColors style={{ width: '100%', marginTop: 15, backgroundColor: "#FFA500" }}>
+          <CardContent orientation="horizontal">
+          <ReportIcon style={{ color: "white", fontSize: 40 }} />
+
+            <CardContent>
+              <Typography level="body-md">Risks and Challenges</Typography>
+              <Typography level="h2">4 Risks</Typography>
+                <Typography level="body-sm" color="error">
+                  This project comes with its own set of risks and challenges. We have identified the following potential issues:
+                </Typography>
+              
+            </CardContent>
+          </CardContent>
+          <CardActions>
+            <Button variant="solid" size="sm">
+              See additional details
+            </Button>
+          </CardActions>
+        </Card>
+              
+        <iframe style={{ 
+        width:"600",
+        height:"450"
+        }}
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+          &q=Space+Needle,Seattle+WA">
+      </iframe>   
+       
+        </div>
       </div>
       {/* Risks and Challenges Section */}
       <Box style={{ marginTop: '20px' }}>
