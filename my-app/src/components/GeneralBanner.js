@@ -9,18 +9,21 @@ const GeneralBanner = ({ image, icon, header, subheader, link }) => {
         display: 'flex',
         alignItems: 'center',
         padding: '20px',
+        marginTop: '20px',
+        marginRight: '270px',
+        marginLeft: '270px',
         backgroundColor: '#f5f5f5',
         borderRadius: '8px',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
       }}
     >
-      {image && <img src={image} alt="Banner" style={{ width: '50px', height: '50px', marginRight: '20px' }} />}
+      {image && <img src={image} alt="Banner" style={{ width: '50px', height: '50px', marginRight: '20px', borderRadius: 50 }} />}
       {icon && <SvgIcon component={icon} style={{ width: '50px', height: '50px', marginRight: '20px' }} />}
       <Box>
-        <Typography variant="h5" component="h2">
+        <Typography variant="text" component="h2" style={{ textAlign: 'left' }}>
           {header}
         </Typography>
-        <Typography variant="body2" component="p">
+        <Typography variant="text" component="p" style={{ textAlign: 'left' }}>
           {subheader}
         </Typography>
         {link && (

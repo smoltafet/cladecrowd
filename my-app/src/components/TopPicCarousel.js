@@ -20,35 +20,35 @@ import BookmarkAdd from '@mui/icons-material/BookmarkAddOutlined';
 const data = [
     {
         imageUrl: "https://mir-s3-cdn-cf.behance.net/projects/404/d177cf53136821.592946e4777f6.png",
-        views: 1200,
+        views: 1242,
         likes: 300,
-        title: "Beautiful Mosque",
+        title: "Tor De",
         supporter: "John Doe",
-        location: "New York, USA"
+        location: "New York, NY"
     },
     {
         imageUrl: "https://nzarchitects.com.pk/wp-content/uploads/2022/09/1-Masjid-Aerial-View.jpg",
-        views: 950,
-        likes: 150,
+        views: 211,
+        likes: 222,
         title: "Modern Architecture",
         supporter: "Jane Smith",
-        location: "Los Angeles, USA"
+        location: "Los Angeles, CA"
     },
     {
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDf1LWSx13_pYx1q5RNCuvhiZHG2VqqYHNXDny9Q0ls187IZWkjz_v8NVmpzuXZkQUP7M&usqp=CAU",
-        views: 1200,
+        views: 572,
         likes: 300,
         title: "Beautiful Mosque",
         supporter: "John Doe",
-        location: "New York, USA"
+        location: "Irvine, CA"
     },
     {
         imageUrl: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126226_en-idei-club-p-mosque-design-dizain-pinterest-18.jpg",
         views: 950,
-        likes: 150,
+        likes: 212,
         title: "Modern Architecture",
         supporter: "Jane Smith",
-        location: "Los Angeles, USA"
+        location: "San Francisco, CA"
     }
 ]
 
@@ -78,7 +78,7 @@ function DribbbleShot({item}) {
   return (
     <Card sx={{ width: 310 }}>
     <div>
-      <Typography level="title-lg">{item.title}</Typography>
+      <Typography level="title-lg">{item.location}</Typography>
       <Typography level="body-sm">April 24 to May 02, 2021</Typography>
       <IconButton
         aria-label="bookmark Bahamas Islands"
@@ -100,9 +100,9 @@ function DribbbleShot({item}) {
     </AspectRatio>
     <CardContent orientation="horizontal">
       <div>
-        <Typography level="body-xs">Total price:</Typography>
+        <Typography level="body-xs">Total raised:</Typography>
         <Typography fontSize="lg" fontWeight="lg">
-          $2,900
+          ${item.views}
         </Typography>
       </div>
       <Button
