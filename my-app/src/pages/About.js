@@ -1,6 +1,5 @@
 import React from 'react';
 import mosque from '../images/mosque.jpg'; // Import the image
-import BlogBanner from '../components/BlogBanner';
 
 const About = () => {
   const styles = {

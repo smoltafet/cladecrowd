@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Box, TextField, InputAdornment, FormControlLabel, Checkbox, FormGroup, Button } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
+import React, { useState } from 'react';
+import { Box, FormControlLabel, Checkbox, FormGroup } from "@mui/material";
 import Carousel from '../components/cavousel.js';
 import DisasterBanner from '../components/DisasterBanner.js';
 import { Typography } from "@mui/joy";
@@ -8,10 +7,7 @@ import BlogBanner from '../components/BlogBanner.js';
 import FavoritesCarousel from '../components/FavoritesCarousel.js';
 import TopPicCarousel from '../components/TopPicCarousel.js';
 import GeneralBanner from '../components/GeneralBanner.js';
-import mockData from '../mockData.js';
-import { db } from '../Firebase.js';
 import Search from '../components/Search.js';
-import { doc, setDoc } from "firebase/firestore"; 
 
 function LandingPage() {
   const [filters, setFilters] = useState({
@@ -27,39 +23,39 @@ function LandingPage() {
     });
   };
 
-  const handleUploadData = () => {
-    // Add a new document in collection "properties" for each item in mockData
-     // Log the type of item.id
+//   const handleUploadData = () => {
+//     // Add a new document in collection "properties" for each item in mockData
+//      // Log the type of item.id
 
-    mockData.forEach(item => {
-        console.log('item.id:', item.id, 'type:', typeof item.id);
-    let itemId = item.id;
-    if (typeof item.id !== 'string') {
-      console.error('Invalid id:', item.id, 'Converting to string.');
-      itemId = item.id.toString();
-    }
-    setDoc(doc(db, "properties", itemId), {
-        id: item.id,
-        title: item.title,
-        description: item.description,
-        goal: item.goal,
-        raised: item.raised,
-        backers: item.backers,
-        imageUrls: item.imageUrls,
-        leaders: item.leaders,
-        supporters: item.supporters,
-        rewards: item.rewards,
-        summary: item.summary,
-        lastUpdated: item.lastUpdated,
-        allOrNothing: item.allOrNothing,
-        type: item.type,
-        likes: item.likes,
-        views: item.views,
-        verified: item.verified,
-        daysLeft: item.daysLeft
-      });
-    });
-  };
+//     mockData.forEach(item => {
+//         console.log('item.id:', item.id, 'type:', typeof item.id);
+//     let itemId = item.id;
+//     if (typeof item.id !== 'string') {
+//       console.error('Invalid id:', item.id, 'Converting to string.');
+//       itemId = item.id.toString();
+//     }
+//     setDoc(doc(db, "properties", itemId), {
+//         id: item.id,
+//         title: item.title,
+//         description: item.description,
+//         goal: item.goal,
+//         raised: item.raised,
+//         backers: item.backers,
+//         imageUrls: item.imageUrls,
+//         leaders: item.leaders,
+//         supporters: item.supporters,
+//         rewards: item.rewards,
+//         summary: item.summary,
+//         lastUpdated: item.lastUpdated,
+//         allOrNothing: item.allOrNothing,
+//         type: item.type,
+//         likes: item.likes,
+//         views: item.views,
+//         verified: item.verified,
+//         daysLeft: item.daysLeft
+//       });
+//     });
+//   };
 
 
   return (

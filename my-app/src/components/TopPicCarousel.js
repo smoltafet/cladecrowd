@@ -1,19 +1,11 @@
 import * as React from 'react';
 import AspectRatio from '@mui/joy/AspectRatio';
-import Avatar from '@mui/joy/Avatar';
 import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
-import CardCover from '@mui/joy/CardCover';
-import Chip from '@mui/joy/Chip';
 import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
-import Link from '@mui/joy/Link';
-import Favorite from '@mui/icons-material/Favorite';
-import Visibility from '@mui/icons-material/Visibility';
-import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
 import Button from '@mui/joy/Button';
 import CardContent from '@mui/joy/CardContent';
-
 import BookmarkAdd from '@mui/icons-material/BookmarkAddOutlined';
 
 
@@ -59,7 +51,6 @@ export default function TopPicCarousel() {
       <Box
         sx={{
           display: 'flex',
-          justifyContent: 'space-between',
           flexWrap: 'wrap',
           gap: 1,
           p: 2,

@@ -4,13 +4,6 @@ import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
-import Link from '@mui/joy/Link';
-import Favorite from '@mui/icons-material/Favorite';
-import Visibility from '@mui/icons-material/Visibility';
-import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
-import Chip from '@mui/joy/Chip';
-import Avatar from '@mui/joy/Avatar';
-import { data } from '../Firebase';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
