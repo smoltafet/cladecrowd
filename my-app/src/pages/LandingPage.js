@@ -7,6 +7,7 @@ import { Typography } from "@mui/joy";
 import BlogBanner from '../components/BlogBanner.js';
 import FavoritesCarousel from '../components/FavoritesCarousel.js';
 import TopPicCarousel from '../components/TopPicCarousel.js';
+import GeneralBanner from '../components/GeneralBanner.js';
 
 function LandingPage() {
   const [filters, setFilters] = useState({
@@ -74,11 +75,15 @@ function LandingPage() {
               </FormGroup>
           </Box>
           <FavoritesCarousel filters={filters}/>
-
+           <GeneralBanner 
+           header={"Most projects require the funding to be fully funded before the project can start."}
+           subheader={"This means that if the project does not reach its funding goal, the project will not be funded."}
+            image={"https://img.freepik.com/premium-photo/sundar-masjid-design_1028528-120.jpg"}/>       
           <Typography level="h2" sx={{ textAlign: 'left', mt: 4, marginLeft: 32, fontWeight: 300}}> Recommended Projects</Typography>
           <Carousel/>
           <DisasterBanner/>
           <TopPicCarousel/>
+
           <BlogBanner/>
           <FavoritesCarousel filters={filters}/>
       </div>
