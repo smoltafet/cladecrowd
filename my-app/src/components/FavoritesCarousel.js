@@ -12,6 +12,41 @@ import Favorite from '@mui/icons-material/Favorite';
 import Visibility from '@mui/icons-material/Visibility';
 import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
 
+const data = [
+    {
+        imageUrl: "https://mir-s3-cdn-cf.behance.net/projects/404/d177cf53136821.592946e4777f6.png",
+        views: 1200,
+        likes: 300,
+        title: "Beautiful Mosque",
+        supporter: "John Doe",
+        location: "New York, USA"
+    },
+    {
+        imageUrl: "https://nzarchitects.com.pk/wp-content/uploads/2022/09/1-Masjid-Aerial-View.jpg",
+        views: 950,
+        likes: 150,
+        title: "Modern Architecture",
+        supporter: "Jane Smith",
+        location: "Los Angeles, USA"
+    },
+    {
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDf1LWSx13_pYx1q5RNCuvhiZHG2VqqYHNXDny9Q0ls187IZWkjz_v8NVmpzuXZkQUP7M&usqp=CAU",
+        views: 1200,
+        likes: 300,
+        title: "Beautiful Mosque",
+        supporter: "John Doe",
+        location: "New York, USA"
+    },
+    {
+        imageUrl: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126226_en-idei-club-p-mosque-design-dizain-pinterest-18.jpg",
+        views: 950,
+        likes: 150,
+        title: "Modern Architecture",
+        supporter: "Jane Smith",
+        location: "Los Angeles, USA"
+    }
+]
+
 export default function FavoritesCarousel() {
     return (
         <>
@@ -26,16 +61,15 @@ export default function FavoritesCarousel() {
           flexDirection: 'row', alignItems: 'center', justifyContent: 'center'
         }}
       >
-        <DribbbleShot />
-        <DribbbleShot />
-        <DribbbleShot />
-        <DribbbleShot />
+        {data.map((item, index) => (
+            <DribbbleShot key={index} item={item} />
+         ))}
       </Box>
       </>
     );
   }
 
-function DribbbleShot() {
+function DribbbleShot({item}) {
   return (
     <Card
       variant="plain"
@@ -49,8 +83,8 @@ function DribbbleShot() {
         <AspectRatio ratio="4/3">
           <figure>
             <img
-              src="https://images.unsplash.com/photo-1515825838458-f2a94b20105a?auto=format&fit=crop&w=300"
-              srcSet="https://images.unsplash.com/photo-1515825838458-f2a94b20105a?auto=format&fit=crop&w=300&dpr=2 2x"
+              src={item.imageUrl}
+              srcSet={item.imageUrl}
               loading="lazy"
               alt="Yosemite by Casey Horner"
             />
@@ -92,7 +126,7 @@ function DribbbleShot() {
                     display: 'block',
                   }}
                 >
-                  Yosemite
+                  {item.title}
                 </Link>
               </Typography>
               <IconButton
@@ -122,7 +156,7 @@ function DribbbleShot() {
           sx={{ '--Avatar-size': '1.5rem' }}
         />
         <Typography sx={{ fontSize: 'sm', fontWeight: 'md' }}>
-          National Park
+          {item.title}
         </Typography>
         <Chip
           variant="outlined"
@@ -148,7 +182,7 @@ function DribbbleShot() {
             '&:hover': { color: 'danger.plainColor' },
           }}
         >
-          117
+          {item.likes}
         </Link>
         <Link
           href="#dribbble-shot"
@@ -161,7 +195,7 @@ function DribbbleShot() {
             '&:hover': { color: 'primary.plainColor' },
           }}
         >
-          10.4k
+          {item.views}k
         </Link>
       </Box>
     </Card>
