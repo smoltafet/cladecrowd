@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, List, Grid, ListItemText } from '@mui/joy';
+import { Box, Typography, Grid } from '@mui/joy';
 import Avatar from '@mui/joy/Avatar';
 import Chip from '@mui/joy/Chip';
 import Button from '@mui/joy/Button';

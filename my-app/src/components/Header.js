@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-import { Button, IconButton, TextField, Typography } from '@mui/material';
+import { Button, IconButton, Typography } from '@mui/material';
 import cladeLogo from '../images/logo2.png'; // Update the path to your logo
 import MenuIcon from '@mui/icons-material/Menu';
 import { AuthContext } from '../context/AuthContext'; // Import AuthContext

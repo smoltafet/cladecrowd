@@ -17,7 +17,7 @@ const data = [
         imageUrl: "https://mir-s3-cdn-cf.behance.net/projects/404/d177cf53136821.592946e4777f6.png",
         views: 345,
         likes: 158,
-        title: "Seville, Spain",
+        title: "Seville",
         supporter: "John Doe",
         location: "Seville, Spain"
     },
@@ -25,7 +25,7 @@ const data = [
         imageUrl: "https://nzarchitects.com.pk/wp-content/uploads/2022/09/1-Masjid-Aerial-View.jpg",
         views: 950,
         likes: 421,
-        title: "Mumbia, India",
+        title: "Mumbia",
         supporter: "Jane Smith",
         location: "Los Angeles, USA"
     },
@@ -33,7 +33,7 @@ const data = [
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDf1LWSx13_pYx1q5RNCuvhiZHG2VqqYHNXDny9Q0ls187IZWkjz_v8NVmpzuXZkQUP7M&usqp=CAU",
         views: 349,
         likes: 201,
-        title: "New York, USA",
+        title: "New York",
         supporter: "John Doe",
         location: "New York, USA"
     },
@@ -41,9 +41,9 @@ const data = [
         imageUrl: "https://en.idei.club/uploads/posts/2023-06/thumbs/1687126226_en-idei-club-p-mosque-design-dizain-pinterest-18.jpg",
         views: 950,
         likes: 578,
-        title: "Los Angeles, USA",
+        title: "Seattle",
         supporter: "Jane Smith",
-        location: "Los Angeles, USA"
+        location: "Seattle, USA"
     }
 ]
 
@@ -54,7 +54,6 @@ export default function FavoritesCarousel() {
       <Box
         sx={{
           display: 'flex',
-          justifyContent: 'space-between',
           flexWrap: 'wrap',
           gap: 1,
           p: 2,

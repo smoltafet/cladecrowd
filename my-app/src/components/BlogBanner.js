@@ -69,6 +69,7 @@ const BlogBanner = () => {
       <div style={styles.content}>
         <div style={styles.imageContainer}>
           <img
+          alt='blog'
             style={styles.image}
             src={blogImage} 
           />

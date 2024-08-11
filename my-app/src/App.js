@@ -26,6 +26,7 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </AuthProvider>
   );
 }

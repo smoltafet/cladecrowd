@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import mockData from '../mockData';
 
 const Search = () => {
   const [query, setQuery] = useState('');
@@ -16,21 +17,16 @@ const Search = () => {
     }
   };
 
+  const concatenateFields = (item) => {
+    return `${item.title} ${item.description} ${item.goal} ${item.raised} ${item.backers} ${item.summary} ${item.type}`;
+  };
+
   const fetchResults = (query) => {
     // Simulate fetching data
-    const sampleData = [
-      'Apple',
-      'Banana',
-      'Cherry',
-      'Date',
-      'Elderberry',
-      'Fig',
-      'Grape',
-      'Honeydew',
-    ];
+    const sampleData = mockData;
 
     const filteredResults = sampleData.filter(item =>
-      item.toLowerCase().includes(query.toLowerCase())
+      concatenateFields(item).toLowerCase().includes(query.toLowerCase())
     );
 
     setResults(filteredResults);
@@ -38,20 +34,21 @@ const Search = () => {
   };
 
   const handleResultClick = (result) => {
-    setQuery(result);
+    setQuery(result.title); // Set the query to the title of the selected result
     setResults([]);
     setShowDropdown(false);
   };
 
   return (
-    <div style={{ position: 'relative', width: '200px' }}>
+    <div style={{ position: 'relative', width: '600px' }}>
       <input
         type="text"
         value={query}
         onChange={handleInputChange}
-        style={{ width: '100%', padding: '8px' }}
+        style={{ width: '100%', padding: '15px', fontSize: '16px', borderRadius: 35 }}
         placeholder="Search..."
       />
+
       {showDropdown && results.length > 0 && (
         <ul style={{
           position: 'absolute',
@@ -63,9 +60,7 @@ const Search = () => {
           listStyleType: 'none',
           margin: 0,
           padding: 0,
-          maxHeight: '150px',
-          overflowY: 'auto',
-          zIndex: 1000,
+          zIndex: 1000
         }}>
           {results.map((result, index) => (
             <li
@@ -73,11 +68,10 @@ const Search = () => {
               onClick={() => handleResultClick(result)}
               style={{
                 padding: '8px',
-                cursor: 'pointer',
-                borderBottom: '1px solid #ccc',
+                cursor: 'pointer'
               }}
             >
-              {result}
+              {result.title}
             </li>
           ))}
         </ul>

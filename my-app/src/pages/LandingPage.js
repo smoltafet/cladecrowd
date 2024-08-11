@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Box, TextField, InputAdornment, FormControlLabel, Checkbox, FormGroup } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
+import { Box, FormControlLabel, Checkbox, FormGroup } from "@mui/material";
 import Carousel from '../components/cavousel.js';
 import DisasterBanner from '../components/DisasterBanner.js';
 import { Typography } from "@mui/joy";
@@ -8,6 +7,7 @@ import BlogBanner from '../components/BlogBanner.js';
 import FavoritesCarousel from '../components/FavoritesCarousel.js';
 import TopPicCarousel from '../components/TopPicCarousel.js';
 import GeneralBanner from '../components/GeneralBanner.js';
+import Search from '../components/Search.js';
 
 function LandingPage() {
   const [filters, setFilters] = useState({
@@ -23,22 +23,46 @@ function LandingPage() {
     });
   };
 
+//   const handleUploadData = () => {
+//     // Add a new document in collection "properties" for each item in mockData
+//      // Log the type of item.id
+
+//     mockData.forEach(item => {
+//         console.log('item.id:', item.id, 'type:', typeof item.id);
+//     let itemId = item.id;
+//     if (typeof item.id !== 'string') {
+//       console.error('Invalid id:', item.id, 'Converting to string.');
+//       itemId = item.id.toString();
+//     }
+//     setDoc(doc(db, "properties", itemId), {
+//         id: item.id,
+//         title: item.title,
+//         description: item.description,
+//         goal: item.goal,
+//         raised: item.raised,
+//         backers: item.backers,
+//         imageUrls: item.imageUrls,
+//         leaders: item.leaders,
+//         supporters: item.supporters,
+//         rewards: item.rewards,
+//         summary: item.summary,
+//         lastUpdated: item.lastUpdated,
+//         allOrNothing: item.allOrNothing,
+//         type: item.type,
+//         likes: item.likes,
+//         views: item.views,
+//         verified: item.verified,
+//         daysLeft: item.daysLeft
+//       });
+//     });
+//   };
+
+
   return (
       <div className="App">
           <br/>
           <Box sx={{ display: 'flex', justifyContent: 'center', mb: 1 }}>
-              <TextField
-                  variant="outlined"
-                  placeholder="Search..."
-                  InputProps={{
-                      startAdornment: (
-                          <InputAdornment position="start">
-                              <SearchIcon />
-                          </InputAdornment>
-                      ),
-                  }}
-                  sx={{ width: '50%' }}
-              />
+              <Search/>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
               <FormGroup row>
