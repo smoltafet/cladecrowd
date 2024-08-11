@@ -69,7 +69,7 @@ const Header = () => {
         <img src={cladeLogo} alt="Logo" style={styles.logo} />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
           <Typography variant="h6" style={{ fontWeight: 300 }}>Clade</Typography>
-          <Typography variant="caption" style={{ fontWeight: 300 }}>Enriching the </Typography>
+          <Typography variant="caption" style={{ fontWeight: 300 }}>Enriching the Ummah</Typography>
         </div>
       </Link>
       <div style={styles.navbarLinks}>
