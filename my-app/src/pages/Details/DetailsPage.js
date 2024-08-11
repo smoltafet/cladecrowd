@@ -14,6 +14,8 @@ import {
   Chip,
   Sheet
 } from "@mui/joy";
+import Modal from '@mui/joy/Modal';
+import ModalClose from '@mui/joy/ModalClose';
 import CardActions from "@mui/joy/CardActions";
 import CircularProgress from "@mui/joy/CircularProgress";
 import SvgIcon from "@mui/joy/SvgIcon";
@@ -23,9 +25,10 @@ import Summary from "./components/Summary";
 import ReportIcon from "@mui/icons-material/Report";
 import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CheckoutModal from "./components/Checkout";
 function DetailsPage() {
   const [tabIndex, setTabIndex] = useState(0);
-
+  const [modalOpen, setModalOpen] = useState(false);
   const handleTabChange = (event, newIndex) => {
     setTabIndex(newIndex);
   };
@@ -352,6 +355,35 @@ function DetailsPage() {
           </CardContent>
         </Card>
       </div>
+    
+    
+    
+
+    <Modal
+        aria-labelledby="modal-title"
+        aria-describedby="modal-desc"
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <Sheet
+          variant="outlined"
+          sx={{
+            maxWidth: 500,
+            borderRadius: 'md',
+            p: 3,
+            boxShadow: 'lg',
+          }}
+        >
+        <ModalClose variant="plain" sx={{ m: 1,
+           position: 'absolute',
+            top: -200,
+            right: -200,
+           
+           }} />
+         <CheckoutModal />
+        </Sheet>
+      </Modal>
       <Grid container spacing={2}>
         {project.rewards.map((reward) => (
           <Grid item xs={12} sm={6} md={4} key={reward.id}>
@@ -366,7 +398,9 @@ function DetailsPage() {
                 <Typography variant="body1" component="p">
                   Pledge: ${reward.amount}
                 </Typography>
-                <Button variant="contained" color="primary">
+                <Button variant="outlined" color="primary"
+                onClick={() => setModalOpen(true)}
+                >
                   Select Reward
                 </Button>
               </CardContent>

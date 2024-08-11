@@ -1,15 +1,9 @@
 import React from 'react';
-import { Modal, Box, Typography, Button, TextField } from '@mui/material';
-import PropTypes from 'prop-types';
+import { Box, Typography, Button, TextField } from '@mui/material';
 
-function CheckoutModal({ open, handleClose }) {
+function CheckoutModal() {
   return (
-    <Modal
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="checkout-modal-title"
-      aria-describedby="checkout-modal-description"
-    >
+   
       <Box sx={{ ...modalStyle }}>
         <Typography id="checkout-modal-title" variant="h6" component="h2">
           Checkout
@@ -45,21 +39,14 @@ function CheckoutModal({ open, handleClose }) {
             color="primary"
             onClick={() => {
               // Handle payment logic here
-              handleClose();
             }}
           >
             Pay Now
           </Button>
         </Typography>
       </Box>
-    </Modal>
   );
 }
-
-CheckoutModal.propTypes = {
-  open: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired,
-};
 
 const modalStyle = {
   position: 'absolute',
