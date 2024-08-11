@@ -5,7 +5,7 @@ import {
   Routes
 } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import DetailsPage from './pages/DetailsPage';
+import DetailsPage from './pages/Details/DetailsPage';
 import Auth from './pages/auth';
 import Header from './components/Header';
 

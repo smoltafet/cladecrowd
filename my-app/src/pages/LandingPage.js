@@ -23,7 +23,7 @@ function LandingPage() {
                   sx={{ width: '50%' }}
               />
           </Box>
-        <Search/>
+            <Search/>
           <Carousel/>
           <DisasterBanner/>
       </div>
